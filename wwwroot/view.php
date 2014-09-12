@@ -1,3 +1,3 @@
 <?php
 	require_once('../smarty.inc');
-	$smarty->display('index.tpl');
+	$smarty->display('view.tpl');

@@ -1,0 +1,38 @@
+
+データベース作成
+CREATE DATABASE Inquiry;
+
+ユーザー保存テーブルを作成
+CREATE TABLE users
+(
+	id MEDIUMINT NOT NULL AUTO_INCREMENT ,
+	use　CHAR( 50 ) NOT NULL ,
+	pass TEXT NOT NULL ,
+	PRIMARY KEY ( id )
+);
+
+ユーザーが投稿したアンケート一覧を保存
+CREATE TABLE user_inquiry
+(
+	id MEDIUMINT NOT NULL AUTO_INCREMENT ,
+	num TEXT NOT NULL ,
+	PRIMARY KEY ( id )
+);
+
+ユーザーが投稿したアンケートの詳細（質問）
+CREATE TABLE inquiry_q
+(
+	id MEDIUMINT NOT NULL AUTO_INCREMENT ,
+	name TEXT NOT NULL ,
+	q TEXT NOT NULL ,
+	PRIMARY KEY ( id )
+);
+
+ユーザーが投稿したアンケートの詳細（回答）
+CREATE TABLE inquiry_r
+(
+	id MEDIUMINT NOT NULL AUTO_INCREMENT ,
+	r TEXT NOT NULL ,
+	PRIMARY KEY ( id )
+);
+
